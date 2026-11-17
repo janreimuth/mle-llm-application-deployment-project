@@ -62,6 +62,10 @@ class ChatProvider:
             if settings.provider == "google"
             else {"reasoning_effort": "none"}
             if settings.provider == "openai"
+            # gpt-oss reasons before answering; low effort leaves room in
+            # max_tokens for the answer itself instead of truncating it.
+            else {"reasoning_effort": "low"}
+            if settings.provider == "groq"
             else {}
         )
         self.client = init_chat_model(
@@ -88,8 +92,11 @@ class ChatProvider:
             raise TimeoutError("Model request timed out") from error
         except IndexError as error:
             raise ValueError("Provider returned no choices") from error
-        if str(response.response_metadata.get("finish_reason")).lower() != "stop":
-            raise ValueError("Provider returned an incomplete answer")
+        finish_reason = str(response.response_metadata.get("finish_reason")).lower()
+        if finish_reason != "stop":
+            raise ValueError(
+                f"Provider returned an incomplete answer (finish_reason={finish_reason})"
+            )
         text = response.text
         if not text.strip():
             raise ValueError("Provider returned no answer")

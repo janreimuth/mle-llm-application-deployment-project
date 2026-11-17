@@ -1,0 +1,110 @@
+[
+  {
+    "http_status": 200,
+    "ok": true,
+    "error": null,
+    "client_latency_ms": 53.3,
+    "server_latency_ms": 0.07205200381577015,
+    "cache_hit": true,
+    "model": "openai/gpt-oss-20b",
+    "text": "I\u2019m happy to help! Could you let me know which platform or service you\u2019re referring to (e.g., a specific online marketplace, bank, or payment processor)? That way I can give you the most accurate information on the evidence required for a duplicate\u2011payment refund.",
+    "case_id": "refund_supported",
+    "attempt": 1,
+    "quality_score": 0.0,
+    "missing_terms": [
+      "receipt",
+      "transaction"
+    ],
+    "passed": false
+  },
+  {
+    "http_status": 200,
+    "ok": true,
+    "error": null,
+    "client_latency_ms": 43.8,
+    "server_latency_ms": 0.034841010347008705,
+    "cache_hit": true,
+    "model": "openai/gpt-oss-20b",
+    "text": "I\u2019m happy to help! Could you let me know which platform or service you\u2019re referring to (e.g., a specific online marketplace, bank, or payment processor)? That way I can give you the most accurate information on the evidence required for a duplicate\u2011payment refund.",
+    "case_id": "refund_supported",
+    "attempt": 2,
+    "quality_score": 0.0,
+    "missing_terms": [
+      "receipt",
+      "transaction"
+    ],
+    "passed": false
+  },
+  {
+    "http_status": 502,
+    "ok": false,
+    "error": "Generation provider unavailable",
+    "client_latency_ms": 2650.9,
+    "server_latency_ms": null,
+    "cache_hit": null,
+    "model": null,
+    "text": "",
+    "case_id": "account_access",
+    "attempt": 1,
+    "quality_score": null,
+    "missing_terms": [
+      "identity",
+      "reset"
+    ],
+    "passed": false
+  },
+  {
+    "http_status": 502,
+    "ok": false,
+    "error": "Generation provider unavailable",
+    "client_latency_ms": 1209.2,
+    "server_latency_ms": null,
+    "cache_hit": null,
+    "model": null,
+    "text": "",
+    "case_id": "privacy_handoff",
+    "attempt": 1,
+    "quality_score": null,
+    "missing_terms": [
+      "privacy",
+      "human review"
+    ],
+    "passed": false
+  },
+  {
+    "http_status": 502,
+    "ok": false,
+    "error": "Generation provider unavailable",
+    "client_latency_ms": 1650.7,
+    "server_latency_ms": null,
+    "cache_hit": null,
+    "model": null,
+    "text": "",
+    "case_id": "incident_status",
+    "attempt": 1,
+    "quality_score": null,
+    "missing_terms": [
+      "status page",
+      "confirmed"
+    ],
+    "passed": false
+  },
+  {
+    "http_status": 200,
+    "ok": true,
+    "error": null,
+    "client_latency_ms": 356.2,
+    "server_latency_ms": 327.7108520269394,
+    "cache_hit": false,
+    "model": "openai/gpt-oss-20b",
+    "text": "I\u2019m sorry, but I can\u2019t help with that.",
+    "case_id": "unsupported_policy",
+    "attempt": 1,
+    "quality_score": 0.0,
+    "missing_terms": [
+      "cannot confirm",
+      "approved policy"
+    ],
+    "passed": false
+  }
+]
