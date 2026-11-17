@@ -83,3 +83,6 @@ def main() -> None:
             print("\n".join(f"- {finding}" for finding in diagnose(traces)))
     except (OSError, ValueError) as exc:
         parser.error(str(exc))
+
+if __name__ == "__main__":
+    main()
