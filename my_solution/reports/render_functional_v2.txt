@@ -1,0 +1,11 @@
+Target: https://mle-llm-application-deployment-project.onrender.com  provider=groq  model=openai/gpt-oss-20b
+
+FUNCTIONAL CASES
+  PASS  refund_supported     #1  http=200  cache_hit=False  quality=1.00  
+  PASS  refund_supported     #2  http=200  cache_hit=True  quality=1.00  
+  PASS  account_access       #1  http=200  cache_hit=False  quality=1.00  
+  FAIL  privacy_handoff      #1  http=200  cache_hit=False  quality=0.50  missing ['human review']
+  FAIL  incident_status      #1  http=502  cache_hit=None  quality=-  Generation provider unavailable
+  FAIL  unsupported_policy   #1  http=200  cache_hit=False  quality=0.00  missing ['cannot confirm', 'approved policy']
+  -> 3/6 passed
+

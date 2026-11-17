@@ -1,0 +1,7 @@
+Target: https://mle-llm-application-deployment-project.onrender.com  provider=groq  model=openai/gpt-oss-20b
+
+LOAD RUN (40 attempts, concurrency 5)
+  p95 latency  1491.7 ms   (objective <= 2000)  met
+  error rate   80.0%       (objective <= 2%)  MISSED
+  mean quality 0.56        (objective >= 0.8)  MISSED
+  cache hits 0, wall 4.19 s, 9.54 req/s
